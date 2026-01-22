@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>its_amine</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">its_amine</div>
+            <ul class="nav-links">
+                <li><button class="tab-btn active" data-tab="webdev">Roblox Scripting</button></li>
+                <li><button class="tab-btn" data-tab="roblox">Web Development</button></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- Roblox Scripting Tab -->
+        <div id="webdev" class="tab-content active">
+            <div class="section">
+                <h1>About Me</h1>
+                <div class="about-content">
+                    <p>Hi, I’m Amine, 17 years old. I’m a Roblox scripter specializing in server-side systems. I write clean, organized code using modules and I’m experienced with datastores and managing game data efficiently.</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h1>Strong Points</h1>
+                <div class="strong-points">
+                    <div class="point">
+                        <h3>⚡ Performance</h3>
+                        <p>I make sure my code runs smoothly. I use caching, Roblox Tasks, and efficient logic to keep games fast, even with many players.</p>
+                    </div>
+                    <div class="point">
+                        <h3>🔒 Security</h3>
+                        <p>My server-side code is built to prevent cheats and exploits. I carefully validate and authenticate all remote events to protect game data.</p>
+                    </div>
+                    <div class="point">
+                        <h3>🗃️ Organization</h3>
+                        <p>I structure my code with modules and microservices. This makes it easy to read, debug, and expand for new features.</p>
+                    </div>
+                    <div class="point">
+                        <h3>🎨 UI</h3>
+                        <p>I create responsive and clear interfaces that look good on all screen sizes.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h1>Previous Work</h1>
+                <div class="work-grid">
+                    <div class="work-item">
+                        <div class="work-media">
+                            <video src="public/roblox/JailSystem.mp4" controls></video>
+                        </div>
+                        <div class="work-info">
+                            <h3>Jail/Cuff System</h3>
+                            <p>Players can be cuffed and placed in a jail. They can be released by pressing "E" on a proximity prompt.</p>
+                        </div>
+                    </div>
+
+                    <div class="work-item">
+                        <div class="work-media">
+                            <video src="public/roblox/TDDemo.mp4" controls></video>
+                        </div>
+                        <div class="work-info">
+                            <h3>Tower Defense Demo</h3>
+                            <p>A demo tower defense game with turrets that have unique shooting effects, smooth turning, health system, and wave-based enemies.</p>
+                        </div>
+                    </div>
+
+                    <div class="work-item">
+                        <div class="work-media">
+                            <video src="public/roblox/Pet Simulator Demo.mp4" controls></video>
+                        </div>
+                        <div class="work-info">
+                            <h3>Pet Simulator Demo</h3>
+                            <p>Collect eggs, hatch pets, and manage them in your inventory. Each pet has unique traits and animations.</p>
+                        </div>
+                    </div>
+
+                    <div class="work-item">
+                        <div class="work-media">
+                            <video src="public/roblox/BloxFruit.mp4" controls></video>
+                        </div>
+                        <div class="work-info">
+                            <h3>Basic Blox Fruit Clone</h3>
+                            <p>One of my first projects. I replicated core features like fighting, skills, and a dashing system.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Web Development Tab -->
+        <div id="roblox" class="tab-content">
+            <div class="section">
+                <h1>About Me</h1>
+                <div class="about-content">
+                    <p>I also do web development. I can create full web apps using Vue.js and Express.js. Check my work on <a href="https://github.com/aminite">GitHub</a>.</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h1>Strong Points</h1>
+                <div class="strong-points">
+                    <div class="point">
+                        <h3>🖥️ Backend</h3>
+                        <p>I build APIs and authentication systems using Express.js and JWT, creating secure and structured backends.</p>
+                    </div>
+                    <div class="point">
+                        <h3>📊 Data Management</h3>
+                        <p>I work with MongoDB and MySQL, and I’m learning Redis to improve caching and performance.</p>
+                    </div>
+                    <div class="point">
+                        <h3>🎨 Frontend</h3>
+                        <p>I create responsive, clean interfaces using Vue.js with good UI/UX design principles.</p>
+                    </div>
+                    <div class="point">
+                        <h3>🎓 Learning</h3>
+                        <p>I’m always exploring new frameworks and tools to improve my skills and keep up with modern development.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const tabBtns = document.querySelectorAll('.tab-btn');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const targetTab = btn.getAttribute('data-tab');
+                
+                tabBtns.forEach(b => b.classList.remove('active'));
+                tabContents.forEach(content => content.classList.remove('active'));
+                
+                btn.classList.add('active');
+                document.getElementById(targetTab).classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
